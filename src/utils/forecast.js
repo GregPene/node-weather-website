@@ -12,6 +12,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('undefined', 'It is currently '+body.current.weather_descriptions[0]
             +', temperature is '+body.current.temperature
             +' and feels like '+body.current.feelslike
+            +' the wind direction is '+body.current.wind_dir,
+            body.current.weather_icons[0]
             )
         }
     })
